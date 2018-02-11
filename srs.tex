@@ -1,0 +1,291 @@
+%Copyright 2014 Jean-Philippe Eisenbarth
+%This program is free software: you can 
+%redistribute it and/or modify it under the terms of the GNU General Public 
+%License as published by the Free Software Foundation, either version 3 of the 
+%License, or (at your option) any later version.
+%This program is distributed in the hope that it will be useful,but WITHOUT ANY 
+%WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A 
+%PARTICULAR PURPOSE. See the GNU General Public License for more details.
+%You should have received a copy of the GNU General Public License along with 
+%this program.  If not, see <http://www.gnu.org/licenses/>.
+
+%Based on the code of Yiannis Lazarides
+%http://tex.stackexchange.com/questions/42602/software-requirements-specification-with-latex
+%http://tex.stackexchange.com/users/963/yiannis-lazarides
+%Also based on the template of Karl E. Wiegers
+%http://www.se.rit.edu/~emad/teaching/slides/srs_template_sep14.pdf
+%http://karlwiegers.com
+\documentclass{scrreprt}
+\usepackage{listings}
+\usepackage{underscore}
+\usepackage[bookmarks=true]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\hypersetup{
+    bookmarks=false,    % show bookmarks bar?
+    pdftitle={Software Requirement Specification},    % title
+    pdfauthor={Jean-Philippe Eisenbarth},                     % author
+    pdfsubject={TeX and LaTeX},                        % subject of the document
+    pdfkeywords={TeX, LaTeX, graphics, images}, % list of keywords
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=blue,       % color of internal links
+    citecolor=black,       % color of links to bibliography
+    filecolor=black,        % color of file links
+    urlcolor=purple,        % color of external links
+    linktoc=page            % only page is linked
+}%
+\def\myversion{1.0 }
+\date{}
+%\title{%
+
+%}
+\usepackage{hyperref}
+\begin{document}
+
+\begin{flushright}
+    \rule{16cm}{5pt}\vskip1cm
+    \begin{bfseries}
+        \Huge{SOFTWARE REQUIREMENTS\\ SPECIFICATION}\\
+        \vspace{1.9cm}
+        for\\
+        \vspace{1.9cm}
+        Automation of GNDEC Sports Department\\
+        \vspace{1.9cm}
+        \LARGE{Version \myversion approved}\\
+        \vspace{1.9cm}
+        Prepared by Nikhil Sarna ,Manpreet Singh , Navjot Singh\\
+        \vspace{1.9cm}
+        $<$Organization$>$\\
+        \vspace{1.9cm}
+        \today\\
+    \end{bfseries}
+\end{flushright}
+
+\tableofcontents
+
+
+\chapter*{Revision History}
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+	    Name & Date & Reason For Changes & Version\\
+        \hline
+	    21 & 22 & 23 & 24\\
+        \hline
+	    31 & 32 & 33 & 34\\
+        \hline
+    \end{tabular}
+\end{center}
+
+\chapter{Introduction}
+
+\section{Purpose}
+\begin{enumerate}
+\item To automate the sports department facilities.
+\item To reduce the manual work of department.
+\item To acknowledge students who got achievements in various fields
+\item To show latest news and upcoming events
+\item Register students for upcoming events
+\end{enumerate}
+
+\section{Document Conventions}
+This Document was created based on the IEEE template for System Requirement Specification Documents.
+
+\section{Intended Audience and Reading Suggestions}
+Typical Users, such as students, who want the know latest news and events organised by sports department.
+
+\section{Project Scope}
+The sports website will help the students to get the latest news and upcoming events.
+
+\section{References}
+IEEE Template for System Requirement Specification Documents:
+\begin{itemize}
+\item https://goo.gl/nsUFwy
+\end{itemize} 
+GNU General Public License version 3: 
+\begin{itemize}
+\item http://www.gnu.org/licenses/gpl.html
+\end{itemize}
+CDDL Common Development and Distribution License:
+ \begin{itemize}	
+\item https://opensource.org/licenses/CDDL-1.0 
+\end{itemize}
+
+
+
+\chapter{Overall Description}
+
+\section{Product Perspective}
+This web application is developed for sports department to keep students updated with current events.
+
+\section{Product Functions}
+\begin{enumerate}
+\item To automate the sports department facilities.
+\item To reduce the manual work of department.
+\item To acknowledge students who got achievements in various fields
+\item To show latest news and upcoming events
+\item Register students for upcoming events
+\end{enumerate}
+
+\section{User Classes and Characteristics}
+Typical Users, such as students, who want the know latest news and events organised by sports department.
+
+\section{Operating Environment}
+\begin{itemize}
+\item Windows 2000
+\item Windows XP
+\item Windows Vista
+\item Windows 7
+\item Windows 8
+\item	 Windows 10
+\item	 Mac OS X
+\item	 Linux
+\end{itemize}
+
+
+\section{Design and Implementation Constraints}
+Sports department website is developed using nodejs,firebase and bootstrap.It uses a modular design where every feature is wrapped into a separate module. Bootstrap is used for front end and nodejs,firebase for backend.
+
+\section{User Documentation}
+
+
+\section{Assumptions and Dependencies}
+Gndec sports website requires following versions of browsers
+
+\begin{enumerate}
+\item Firefox-58.0
+\item		Chrome-63.0
+\item		Microsoft edge
+\end{enumerate} 
+
+
+
+\chapter{External Interface Requirements}
+
+\section{User Interfaces}
+$<$Describe the logical characteristics of each interface between the software 
+product and the users. This may include sample screen images, any GUI standards 
+or product family style guides that are to be followed, screen layout 
+constraints, standard buttons and functions (e.g., help) that will appear on 
+every screen, keyboard shortcuts, error message display standards, and so on.  
+Define the software components for which a user interface is needed. Details of 
+the user interface design should be documented in a separate user interface 
+specification.$>$
+
+\section{Hardware Interfaces}
+$<$Describe the logical and physical characteristics of each interface between 
+the software product and the hardware components of the system. This may include 
+the supported device types, the nature of the data and control interactions 
+between the software and the hardware, and communication protocols to be 
+used.$>$
+
+\section{Software Interfaces}
+$<$Describe the connections between this product and other specific software 
+components (name and version), including databases, operating systems, tools, 
+libraries, and integrated commercial components. Identify the data items or 
+messages coming into the system and going out and describe the purpose of each.  
+Describe the services needed and the nature of communications. Refer to 
+documents that describe detailed application programming interface protocols.  
+Identify data that will be shared across software components. If the data 
+sharing mechanism must be implemented in a specific way (for example, use of a 
+global data area in a multitasking operating system), specify this as an 
+implementation constraint.$>$
+
+\section{Communications Interfaces}
+$<$Describe the requirements associated with any communications functions 
+required by this product, including e-mail, web browser, network server 
+communications protocols, electronic forms, and so on. Define any pertinent 
+message formatting. Identify any communication standards that will be used, such 
+as FTP or HTTP. Specify any communication security or encryption issues, data 
+transfer rates, and synchronization mechanisms.$>$
+
+
+\chapter{System Features}
+$<$This template illustrates organizing the functional requirements for the 
+product by system features, the major services provided by the product. You may 
+prefer to organize this section by use case, mode of operation, user class, 
+object class, functional hierarchy, or combinations of these, whatever makes the 
+most logical sense for your product.$>$
+
+\section{System Feature 1}
+$<$Don’t really say “System Feature 1.” State the feature name in just a few 
+words.$>$
+
+\subsection{Description and Priority}
+$<$Provide a short description of the feature and indicate whether it is of 
+High, Medium, or Low priority. You could also include specific priority 
+component ratings, such as benefit, penalty, cost, and risk (each rated on a 
+relative scale from a low of 1 to a high of 9).$>$
+
+\subsection{Stimulus/Response Sequences}
+$<$List the sequences of user actions and system responses that stimulate the 
+behavior defined for this feature. These will correspond to the dialog elements 
+associated with use cases.$>$
+
+\subsection{Functional Requirements}
+$<$Itemize the detailed functional requirements associated with this feature.  
+These are the software capabilities that must be present in order for the user 
+to carry out the services provided by the feature, or to execute the use case.  
+Include how the product should respond to anticipated error conditions or 
+invalid inputs. Requirements should be concise, complete, unambiguous, 
+verifiable, and necessary. Use “TBD” as a placeholder to indicate when necessary 
+information is not yet available.$>$
+
+$<$Each requirement should be uniquely identified with a sequence number or a 
+meaningful tag of some kind.$>$
+
+REQ-1:	REQ-2:
+
+\section{System Feature 2 (and so on)}
+
+
+\chapter{Other Nonfunctional Requirements}
+
+\section{Performance Requirements}
+Gndec sports website requires a working internet connection and following versions of browsers for optimum performance
+\begin{enumerate}
+\item Firefox-58.0
+\item		Chrome-63.0
+\item		Microsoft edge
+\end{enumerate} 
+
+\section{Safety Requirements}
+To ensure that access of admin panel should not be given to any student ,validations are being used. Only admin has access to bring changes in the sports web applications.
+
+\section{Security Requirements}
+GNDEC sports web application does not have any security requirements and thus any type of user can use it without any additional privileges.
+
+\section{Software Quality Attributes}
+GNDEC sports web application provides the users simple and easy interface to access the website. Admin has features to update, delete and add various information regarding sports department. However, admin must already have a basic knowledge of computer field before using it.
+
+\section{Business Rules}
+$<$List any operating principles about the product, such as which individuals or 
+roles can perform which functions under specific circumstances. These are not 
+functional requirements in themselves, but they may imply certain functional 
+requirements to enforce the rules.$>$
+
+
+\chapter{Other Requirements}
+$<$Define any other requirements not covered elsewhere in the SRS. This might 
+include database requirements, internationalization requirements, legal 
+requirements, reuse objectives for the project, and so on. Add any new sections 
+that are pertinent to the project.$>$
+
+\section{Appendix A: Glossary}
+%see https://en.wikibooks.org/wiki/LaTeX/Glossary
+$<$Define all the terms necessary to properly interpret the SRS, including 
+acronyms and abbreviations. You may wish to build a separate glossary that spans 
+multiple projects or the entire organization, and just include terms specific to 
+a single project in each SRS.$>$
+
+\section{Appendix B: Analysis Models}
+$<$Optionally, include any pertinent analysis models, such as data flow 
+diagrams, class diagrams, state-transition diagrams, or entity-relationship 
+diagrams.$>$
+
+\section{Appendix C: To Be Determined List}
+$<$Collect a numbered list of the TBD (to be determined) references that remain 
+in the SRS so they can be tracked to closure.$>$
+
+\end{document}
